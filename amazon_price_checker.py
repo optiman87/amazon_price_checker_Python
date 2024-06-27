@@ -1,5 +1,11 @@
-# Define a function that checks the price of the first 10 products from an Amazon search result for 'Amazon Fire TV'
+# Import the required libraries
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+import os
 
+
+# Define a function that checks the price of the first 10 products from an Amazon search result for 'Amazon Fire TV'
 def amazon_price_checker():
     # Define URL and header
     url='https://www.amazon.ca/s?k=amazon+fire+tv&ref=nb_sb_noss'
