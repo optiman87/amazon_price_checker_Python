@@ -38,9 +38,9 @@ def amazon_price_checker():
 
     # Store the dataframa as a csv file, if the csv file exists, the dataframe will be appended to the existing csv file.
     if not os.path.isfile('/Users/ek/Desktop/PythonPortfolio/price_extract.csv'):
-        df.to_csv('/Users/ek/Desktop/PythonPortfolio/price_extract.csv', header='column_names')
+        df.to_csv('/Users/ek/Desktop/PythonPortfolio/price_extract.csv', header='column_names', index= False)
     else:
-        df.to_csv('/Users/ek/Desktop/PythonPortfolio/price_extract.csv', mode='a',header=None)
+        df.to_csv('/Users/ek/Desktop/PythonPortfolio/price_extract.csv', mode='a',header=None, index= False)
 
 # Schedule timer to run the Amazon Price Checker every minute (60s).
 while True:
